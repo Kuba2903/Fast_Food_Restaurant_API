@@ -1,0 +1,18 @@
+﻿using ClassLib.Burgers.Ingredients.Meat;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLib.Food.Ingredients.Meat
+{
+    public class Salami : IMeat
+    {
+        public IMeat GetMeat()
+        {
+            Console.WriteLine("Salami");
+            return this;
+        }
+    }
+}

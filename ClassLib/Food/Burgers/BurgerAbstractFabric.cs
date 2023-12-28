@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Burgers
 {
-    public abstract class BurgerFabric
+    public abstract class BurgerAbstractFabric
     {
         protected string Name { get; set; }
         protected double Price { get; set; }
@@ -25,10 +25,20 @@ namespace ClassLib.Burgers
         protected abstract IMeat CreateMeat();
         protected abstract IOnion CreateOnion();
         protected abstract ISauce CreateSauce();
-        protected abstract ICheese CreateCheese();
-        protected abstract IBacon CreateBacon();
+        protected ICheese CreateCheese()
+        {
+            var cheese = new Mozarella();
+            cheese.GetCheese();
+            return cheese;
+        }
+        protected IBacon CreateBacon()
+        {
+            var bacon = new Bacon();
+            bacon.GetBacon();
+            return bacon;
+        }
         public abstract void IngredientsList();
-        public abstract string GetName();
-        public abstract double GetPrice();
+        public string GetName() => Name;
+        public double GetPrice() => Price;
     }
 }

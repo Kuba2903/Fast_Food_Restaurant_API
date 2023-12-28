@@ -16,7 +16,7 @@ using System.Xml.Linq;
 
 namespace ClassLib.Burgers
 {
-    public class BaconBurger : BurgerFabric
+    public class BaconBurger : BurgerAbstractFabric
     {
 
         public BaconBurger()
@@ -79,27 +79,9 @@ namespace ClassLib.Burgers
             return sauce;
         }
 
-
-
-        protected override IBacon CreateBacon()
-        {
-            var bacon = new Bacon();
-            bacon.GetBacon();
-            Console.WriteLine();
-            return bacon;
-        }
-
         protected override IOnion CreateOnion()
         {
             throw new NotImplementedException();
         }
-
-        protected override ICheese CreateCheese()
-        {
-            throw new NotImplementedException();
-        }
-        public override string GetName() => Name;
-
-        public override double GetPrice() => Price;
     }
 }

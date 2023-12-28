@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Burgers
 {
-    public class CheeseBurger : BurgerFabric
+    public class CheeseBurger : BurgerAbstractFabric
     {
 
         public CheeseBurger()
@@ -84,21 +84,5 @@ namespace ClassLib.Burgers
             return sauce;
         }
 
-        protected override ICheese CreateCheese()
-        {
-            var cheese = new Mozarella();
-            cheese.GetCheese();
-            Console.WriteLine();
-            return cheese;
-        }
-
-        protected override IBacon CreateBacon()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string GetName() => Name;
-
-        public override double GetPrice() => Price;
     }
 }
