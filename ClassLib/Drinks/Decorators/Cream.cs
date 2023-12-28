@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLib.Decorators
+namespace ClassLib.Drinks.Decorators
 {
     public class Cream : AbstractDecorator
     {

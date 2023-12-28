@@ -1,6 +1,7 @@
 ﻿using ClassLib;
+using ClassLib.Burgers;
 using ClassLib.ConcreteDrinks;
-using ClassLib.Decorators;
+using ClassLib.Drinks.Decorators;
 
 namespace Launcher
 {
@@ -14,6 +15,9 @@ namespace Launcher
             Console.WriteLine(cola.ToString());
             Console.WriteLine();
             Console.WriteLine(coffee.ToString());
+
+            CheeseBurger burger = new CheeseBurger();
+            burger.IngredientsList();
         }
     }
 }
