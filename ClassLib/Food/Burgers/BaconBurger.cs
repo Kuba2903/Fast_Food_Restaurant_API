@@ -23,6 +23,7 @@ namespace ClassLib.Burgers
         {
             Name = "Bacon burger";
             Price = 15.90;
+            Calories = 500;
         }
 
         public override void IngredientsList()

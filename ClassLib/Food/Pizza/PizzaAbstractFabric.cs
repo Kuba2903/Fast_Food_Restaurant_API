@@ -17,6 +17,7 @@ namespace ClassLib.Food.Pizza
     {
         protected string Name { get; set; }
         protected double Price { get; set; }
+        protected int Calories { get; set; }
         protected IMeat CreateMeat()
         {
             var meat = new Salami();
@@ -40,6 +41,7 @@ namespace ClassLib.Food.Pizza
         protected abstract ISauce CreateSauce();
         public string GetName() => Name;
         public double GetPrice() => Price;
+        public int GetCalories() => Calories;
         public abstract void IngredientsList();
     }
 }

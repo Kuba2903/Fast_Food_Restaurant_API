@@ -14,6 +14,6 @@ namespace ClassLib.Commands
         {
             this.waitress = waitress;
         }
-        public void Do() => waitress.BringOrder();
+        public void Do() => waitress.GetOrder();
     }
 }

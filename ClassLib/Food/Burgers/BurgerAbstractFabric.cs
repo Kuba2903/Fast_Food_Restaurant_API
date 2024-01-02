@@ -18,6 +18,7 @@ namespace ClassLib.Burgers
     {
         protected string Name { get; set; }
         protected double Price { get; set; }
+        protected int Calories { get; set; }
 
         protected abstract IBun CreateBun();
         protected abstract ICucumber CreateCucumber();
@@ -40,5 +41,6 @@ namespace ClassLib.Burgers
         public abstract void IngredientsList();
         public string GetName() => Name;
         public double GetPrice() => Price;
+        public int GetCalories() => Calories;
     }
 }

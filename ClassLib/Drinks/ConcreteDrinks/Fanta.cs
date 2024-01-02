@@ -16,17 +16,17 @@ namespace ClassLib.ConcreteDrinks
             switch (size)
             {
                 case Size.Small:
-                    Calories = 150;
+                    Calories = 100;
                     Price = 8.50;
                     Description = "Small fanta";
                     break;
                 case Size.Medium:
-                    Calories = 250;
+                    Calories = 200;
                     Price = 10.50;
                     Description = "Medium fanta";
                     break;
                 case Size.Large:
-                    Calories = 350;
+                    Calories = 300;
                     Price = 12.50;
                     Description = "Large fanta";
                     break;

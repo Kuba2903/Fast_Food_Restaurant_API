@@ -3,7 +3,9 @@ using ClassLib.Burgers;
 using ClassLib.Commands;
 using ClassLib.ConcreteDrinks;
 using ClassLib.Drinks.Decorators;
+using ClassLib.Facade;
 using ClassLib.Food.Pizza;
+using ClassLib.Food.Sandwiches;
 
 namespace Launcher
 {
@@ -11,18 +13,11 @@ namespace Launcher
     {
         static void Main(string[] args)
         {
-            SalamiPizza pizza = new SalamiPizza(Size.Medium);
-            AbstractDrinks cola = new Cola(Size.Large);
-
-            Waitress waitress = new Waitress(pizza,cola);
-            ICommand bring = new BringOrderCommand(waitress);
-            ICommand get = new GetOrderCommand(waitress);
-            Pilot pilot = new Pilot();
-            pilot.SetCommand(get);
-            pilot.ExecuteCommand();
-            pilot.SetCommand(bring);
-            pilot.ExecuteCommand();
-            
+            CreatingOrder facade = new CreatingOrder();
+            AbstractDrinks drink = new Cola(Size.Small);
+            SandwichAbstractFabric sandwich = new MeatSandwich();
+            Waitress waitress = new Waitress(sandwich,drink);
+            facade.CreateOrder(waitress);
         }
     }
 }

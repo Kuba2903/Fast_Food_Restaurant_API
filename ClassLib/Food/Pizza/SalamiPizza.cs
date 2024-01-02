@@ -22,12 +22,15 @@ namespace ClassLib.Food.Pizza
             {
                 case Size.Small:
                     Price = 25;
+                    Calories = 1200;
                     break;
                 case Size.Medium:
                     Price = 35;
+                    Calories = 1600;
                     break;
                 case Size.Large:
                     Price = 42.99;
+                    Calories = 2000;
                     break;
             }
         }
